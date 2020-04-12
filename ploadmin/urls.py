@@ -10,4 +10,5 @@ urlpatterns = [
     path('results/', views.results, name='results'),
     path('modify/<int:user_id>', views.modify, name='modify'),
     path('index', views.index, name='index'),
+    path('login', views.login, name='login'),
 ]

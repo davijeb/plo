@@ -37,3 +37,6 @@ def modify(request, user_id):
 def index(request):
 	latest_user = User.objects.order_by('id')[:5]
 	return render(request, 'ploadmin/index.html', {'latest_user': latest_user})
+
+def login(request):
+	return render(request, 'ploadmin/login.html', {})
