@@ -11,4 +11,5 @@ urlpatterns = [
     path('modify/<int:user_id>', views.modify, name='modify'),
     path('index', views.index, name='index'),
     path('login', views.login, name='login'),
+    path('home', views.home, name='home'),
 ]

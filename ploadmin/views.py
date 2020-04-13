@@ -40,3 +40,6 @@ def index(request):
 
 def login(request):
 	return render(request, 'ploadmin/login.html', {})
+
+def home(request):
+	return render(request, 'ploadmin/home.html', {})
