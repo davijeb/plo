@@ -43,3 +43,9 @@ def login(request):
 
 def home(request):
 	return render(request, 'ploadmin/home.html', {})
+
+def user(request):
+	return render(request, 'ploadmin/user.html', {})
+
+def signin(request):
+	return HttpResponseRedirect(reverse('ploadmin:home'))
