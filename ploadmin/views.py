@@ -5,10 +5,15 @@ from django.urls import reverse
 import django_tables2 as tables
 
 from .models import User
+from .models import Country
 
 class SimpleTable(tables.Table):
     class Meta:
         model = User
+
+class SimpleCountryTable(tables.Table):
+    class Meta:
+        model = Country
 
 
 def test(request):
@@ -49,3 +54,9 @@ def user(request):
 
 def signin(request):
 	return HttpResponseRedirect(reverse('ploadmin:home'))
+
+def country(request):
+    table = SimpleCountryTable(
+        Country.objects.all(), attrs={"class": "paleblue"}, template_name="django_tables2/table.html"
+    )
+    return render(request, "ploadmin/country.html", {"table": table})

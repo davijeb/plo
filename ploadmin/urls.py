@@ -14,4 +14,5 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('user', views.user, name='user'),
     path('signin', views.signin, name='signin'),
+    path('country', views.country, name='country'),
 ]

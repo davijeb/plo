@@ -13,3 +13,7 @@ class User(models.Model):
 	contact_email = models.CharField(max_length=200)
 	contact_phone = models.CharField(max_length=200)
 	question_text = models.CharField(max_length=200)
+
+class Country(models.Model):
+
+	name = models.CharField(max_length=200)
